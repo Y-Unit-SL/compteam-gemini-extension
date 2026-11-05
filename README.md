@@ -1,20 +1,21 @@
-# Compteam — BJJ Classes & Memberships for Gemini CLI
+# Compteam — BJJ Classes & Memberships for Gemini CLI and Antigravity
 
 Find Brazilian jiu-jitsu (BJJ) and martial arts clubs, explore class schedules, and compare membership plans and prices. Connect your Compteam account to view upcoming classes, check membership and payment status, and manage attendance for yourself or a linked child. You can also ask a club about an eligible free trial class.
 
 ## Release status
 
-This is a preview extension. The production OAuth client, its callback, and the token audience were verified on 2026-11-05. A full Gemini CLI sign-in and protected tool call have not yet been confirmed. This extension is not affiliated with or endorsed by Google.
+This is a preview extension. The production OAuth client, its callback, and the token audience were verified on 2026-11-05. A full Gemini CLI or Antigravity sign-in and protected tool call have not yet been confirmed. This extension is not affiliated with or endorsed by Google.
 
 ## What is included
 
 - A remote MCP connection to `https://api.compteam.io/mcp`.
 - The `compteam-training` skill for finding classes and plans, checking linked account information, and managing attendance.
 - `GEMINI.md` context with usage and safety guidance.
+- An Antigravity plugin manifest (`.antigravity-plugin/plugin.json`) and MCP configuration (`mcp_config.json`).
 
 Public club details, schedules, and membership prices can be read without signing in. Personal information requires Compteam OAuth and is restricted to the signed-in person and children linked to that account. Attendance changes and trial inquiries require confirmation. Membership purchases, payments, club administration, and athlete registration are outside this extension's capabilities.
 
-## Install
+## Install in Gemini CLI
 
 ```bash
 gemini extensions install https://github.com/Y-Unit-SL/compteam-gemini-extension
@@ -29,6 +30,16 @@ For local development:
 ```bash
 gemini extensions link ./compteam-gemini-extension
 ```
+
+## Install in Antigravity CLI
+
+```bash
+agy plugin install https://github.com/Y-Unit-SL/compteam-gemini-extension
+```
+
+Run `agy inspect` to confirm the plugin and its `compteam_compteam` MCP server loaded. When a personal tool needs your account, Antigravity opens Compteam's consent page in your browser. After you approve, the browser lands on `https://antigravity.google/oauth-callback`; complete sign-in as Antigravity prompts. The plugin uses its own public OAuth client and no client secret.
+
+If you previously installed the Gemini CLI extension, `agy plugin import gemini` also registers it, but the Gemini manifest's loopback callback is not registered for Antigravity. Install the plugin from this repository instead.
 
 ## Try asking
 

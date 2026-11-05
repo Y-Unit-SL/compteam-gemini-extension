@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "compteam": {
+      "serverUrl": "https://api.compteam.io/mcp",
+      "oauth": {
+        "clientId": "dc9dd148-1dae-4cc6-918b-cc257341fc4c"
+      }
+    }
+  }
+}
