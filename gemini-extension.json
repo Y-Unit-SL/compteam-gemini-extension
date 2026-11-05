@@ -1,0 +1,17 @@
+{
+  "name": "compteam",
+  "version": "0.1.0",
+  "description": "Find Brazilian jiu-jitsu clubs, class schedules and membership prices. Connect Compteam to view your classes and manage attendance for yourself or a linked child.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "compteam": {
+      "httpUrl": "https://api.compteam.io/mcp",
+      "oauth": {
+        "enabled": true,
+        "clientId": "9d6b8c8d-6f77-4073-962c-69b11fb7456e",
+        "redirectUri": "http://localhost:38762/oauth/callback",
+        "scopes": ["openid", "email", "profile"]
+      }
+    }
+  }
+}
