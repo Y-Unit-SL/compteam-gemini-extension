@@ -4,7 +4,7 @@ Find Brazilian jiu-jitsu (BJJ) and martial arts clubs, explore class schedules, 
 
 ## Release status
 
-This is a preview extension. The production OAuth client, its callback, and the token audience were verified on 2026-11-05. A full Gemini CLI or Antigravity sign-in and protected tool call have not yet been confirmed. This extension is not affiliated with or endorsed by Google.
+This is a preview extension. The production OAuth client, its callback, and the token audience were verified on 2026-11-05. In Antigravity CLI, Compteam sign-in and protected MCP tool calls were confirmed on 2026-11-05. Gemini CLI loads the extension and connects to the server; its account sign-in has not yet been exercised end to end. This extension is not affiliated with or endorsed by Google.
 
 ## What is included
 
