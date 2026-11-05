@@ -10,7 +10,7 @@ This is a preview extension. The production OAuth client, its callback, and the 
 
 - A remote MCP connection to `https://api.compteam.io/mcp`.
 - The `compteam-training` skill for finding classes and plans, checking linked account information, and managing attendance.
-- `GEMINI.md` context with usage and safety guidance.
+- `rules/compteam.md` context with usage and safety guidance, loaded by both Gemini CLI and Antigravity.
 - An Antigravity plugin manifest (`.antigravity-plugin/plugin.json`) and MCP configuration (`mcp_config.json`).
 
 Public club details, schedules, and membership prices can be read without signing in. Personal information requires Compteam OAuth and is restricted to the signed-in person and children linked to that account. Attendance changes and trial inquiries require confirmation. Membership purchases, payments, club administration, and athlete registration are outside this extension's capabilities.
